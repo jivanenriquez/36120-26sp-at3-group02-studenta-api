@@ -1,0 +1,35 @@
+[project]
+name = "36120-26sp-at3-group02-studenta-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jivan Enriquez", email = "FerdinandoJr.Enriquez@student.uts.edu.au" }
+]
+requires-python = "==3.12.13"
+dependencies = [
+    "fastapi[standard]==0.139.0",
+    "joblib==1.5.3",
+    "pandas==2.2.2",
+    "pip",
+    "python-dotenv",
+    "ruff",
+    "dayinml>=0.1.12",
+    "streamlit==1.59.0",
+    "uvicorn==0.50.0",
+]
+
+[project.scripts]
+36120-26sp-at3-group02-studenta-api = "36120_26sp_at3_group02_studenta_api:main"
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+explicit = true
+
+[tool.uv.sources]
+dayinml = { index = "testpypi" }
